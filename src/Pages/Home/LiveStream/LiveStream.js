@@ -1,7 +1,10 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import './Live.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper";
+import 'swiper/css';
+// import './Live.css'
 import LiveCard from "./LiveCard";
 const LiveStream = () => {
   const [live, setLive] = useState([]);
@@ -11,16 +14,27 @@ const LiveStream = () => {
       .then((data) => setLive(data));
   }, []);
   return (
-    <div>
+    <div >
       <h1 className="text-3xl text-center font-bold uppercase mt-16">
         Live <span className="text-orange-400">Stream</span>
       </h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-12 mt-20">
+      <div className="mt-10">
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
       {
-          live.map(lives=> <div key={lives.id}>
+          live.map(lives=> 
+          <SwiperSlide key={lives.id}>
             <LiveCard lives={lives}></LiveCard>            
-          </div>)
+          </SwiperSlide>)
       }
+      </Swiper>
       </div>
     </div>
   );

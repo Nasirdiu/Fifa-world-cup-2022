@@ -6,7 +6,7 @@ const LiveCard = ({ lives }) => {
       <div >
         <div class="card w-96 bg-base-100 shadow-xl">
           <figure>
-            <img src={lives.img} alt="" />
+            <img src={lives.img} alt="" className="w-80 h-50" />
           </figure>
           <div class="card-body">
             <h2 class="card-title">

@@ -1,90 +1,110 @@
 import React from 'react';
 import img from '../../../assets/sadium/alianz arena.jpg'
-import img6 from '../../../assets/sadium/alianz arena.jpg'
-import img1 from '../../../assets/sadium/EO3W2HxXsAA-61b.jpg'
-import img2 from '../../../assets/sadium/EO3W2HxXsAA-61b.jpg'
-import img3 from '../../../assets/sadium/EO3W2HxXsAA-61b.jpg'
-import img4 from '../../../assets/sadium/EO3W2HxXsAA-61b.jpg'
-import img5 from '../../../assets/sadium/EO3W2HxXsAA-61b.jpg'
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import {  Pagination } from "swiper";
+import 'swiper/css';
 const Studium = () => {
     return (
         <div>
       <h1 className="text-3xl text-center font-bold uppercase mt-40">
         All Stadium
       </h1>
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 px-12 mt-20'>
+      <div className="mt-10">
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
         <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
           <figure>
+            
             <img
               src={img}
               alt=""
             />
+         
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-          
-          </div>
+          </SwiperSlide>
         </div>
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
           <figure>
+            
             <img
-              src={img1}
+              src={img}
               alt=""
             />
+         
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            
-          </div>
+          </SwiperSlide>
         </div>
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
           <figure>
+            
             <img
-              src={img2}
+              src={img}
               alt=""
             />
+         
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            
-          </div>
+          </SwiperSlide>
         </div>
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
           <figure>
+            
             <img
-              src={img3}
+              src={img}
               alt=""
             />
+         
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            
-          </div>
+          </SwiperSlide>
         </div>
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
           <figure>
-            <img
-              src={img6}
-              alt="Shoes"
-            />
-          </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
             
-          </div>
-        </div>
-        <div class="card card-compact w-96 bg-base-100 shadow-xl">
-          <figure>
             <img
-              src={img4}
-              alt="Shoes"
+              src={img}
+              alt=""
             />
+         
           </figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-           
-          </div>
+          </SwiperSlide>
         </div>
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
+          <figure>
+            
+            <img
+              src={img}
+              alt=""
+            />
+         
+          </figure>
+          </SwiperSlide>
+        </div>
+        <div class="card card-compact w-96 bg-base-100 shadow-xl hover:bg-red-500">
+        <SwiperSlide>
+          <figure>
+            
+            <img
+              src={img}
+              alt=""
+            />
+         
+          </figure>
+          </SwiperSlide>
+        </div>
+      </Swiper>
       </div>
     </div>
     );
